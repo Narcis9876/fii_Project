@@ -1,0 +1,32 @@
+form {
+    height: auto;
+    width: 300px;
+}
+
+.pokeadd {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 7rem;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+.addedPokemon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.anotherBattle {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 20rem;
+}

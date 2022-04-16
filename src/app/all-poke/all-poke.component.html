@@ -1,0 +1,30 @@
+<div class="nextbtn">
+
+    <div class="example-button-container">
+        <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" (click)="getAllPoke()">
+      <mat-icon>plus_one</mat-icon>
+    </button>
+    </div>
+    <div>
+        <h3>Click for next Poke</h3>
+    </div>
+</div>
+
+<div class="aaa" *ngFor="let poke of pokemons, let i=index">
+
+    <div class="poke">
+
+
+        <h3>
+
+            Name: {{poke.name}} <br> Id: {{poke.id}} <br> Battle:{{poke.base_experience}}
+        </h3>
+        <div class="imag">
+            <img [src]="poke.sprites.front_default" alt="">
+
+        </div>
+
+    </div>
+
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+</div>

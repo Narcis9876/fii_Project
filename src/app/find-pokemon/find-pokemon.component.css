@@ -1,0 +1,42 @@
+.box {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.divimg {
+    display: flex;
+    justify-content: center;
+}
+
+.imag {
+    height: 250px;
+    width: 200px;
+    border-bottom: solid 1px rgb(112, 28, 28);
+}
+
+.box :hover {
+    color: blue;
+    font-family: fantasy;
+}
+
+.spinner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10rem;
+    flex-direction: column;
+}
+
+.error {
+    display: flex;
+    justify-content: center;
+    color: red;
+    flex-direction: column;
+}
+
+input.ng-touched.ng-invalid {
+    border: solid 1px red;
+}

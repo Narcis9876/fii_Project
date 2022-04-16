@@ -1,0 +1,21 @@
+.nextbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.aaa {
+    display: flex;
+    padding-left: 110px;
+}
+
+.imag {
+    height: 100px;
+    width: 80px;
+    ;
+}
+
+.poke {
+    display: flex;
+    justify-content: center;
+    width: 100px;
+}

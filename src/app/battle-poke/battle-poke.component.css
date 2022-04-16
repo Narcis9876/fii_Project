@@ -1,0 +1,30 @@
+.battleForm {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+.battle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding-top: 10rem;
+}
+
+.pokeWinner {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+    color: brown;
+}
+
+.anotherBattle {
+    display: flex;
+    justify-content: flex-end;
+}

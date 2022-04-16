@@ -1,0 +1,60 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form (ngSubmit)="fetchPokemon()" #f="ngForm">
+                <div>
+                    <label for="pokemon"> Pokemon Name </label>
+                    <input type="text" class="form-control" required ngModel name="name" #name="ngModel" [(ngModel)]="pokemonName" [matAutocomplete]="auto">
+                    <mat-autocomplete #auto="matAutocomplete">
+                        <mat-option *ngFor="let option of options" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <span class="=help-block" *ngIf="!name.valid && name.touched">Enter a pokemon name!</span>
+
+                </div>
+                <br>
+                <button mat-raised-button color="accent" type="submit" [disabled]="!f.valid">Get</button>
+
+
+            </form>
+        </div>
+    </div>
+</div>
+<div class="error" *ngIf="haveError">
+    <div class="divimg">
+        <img src="https://t3.ftcdn.net/jpg/04/21/05/80/360_F_421058012_TsV76QVuJhignu12Ei9VHpeWDWjHmeA6.jpg" style="height: 130px; width: 150px;">
+    </div>
+    <div class="divimg">
+
+        <h3>
+
+            {{error}}
+        </h3>
+    </div>
+</div>
+
+<div class="box" *ngFor="let item of pokemon">
+
+    <h3>
+        Name: {{item.name | uppercase}}
+        <br> <br> Id: {{item.id }}
+    </h3>
+
+    <div class="divimg">
+
+        <img class="imag" [src]="item.sprites.front_default" alt="">
+    </div>
+</div>
+
+
+
+<div class="spinner" *ngIf="spinner">
+    <h4>Enter a pokemon name</h4>
+    <app-loading-spinner></app-loading-spinner>
+
+    <div class="divimg">
+        <img src="https://cdn.adh.reperio.news/image-f/f8f68c86-eeb5-4cb3-b3ca-dc18d14408e3/index.jpeg?p=a%3D1%26co%3D1.05%26w%3D500%26h%3D750%26q%3D91%26r%3Dcontain%26f%3Dwebp" style="height: 300px; width: 500px;" alt="">
+    </div>
+
+</div>
